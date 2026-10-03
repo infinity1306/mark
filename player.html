@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinetic Typography Motion Graphic // Studio Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@500;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #070708;
+      color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1200px;
+      width: 100%;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(212, 255, 0, 0.1);
+      border: 1px solid rgba(212, 255, 0, 0.3);
+      color: #d4ff00;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d4ff00;
+      box-shadow: 0 0 10px #d4ff00;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+    .title-group h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffffff 40%, rgba(255, 255, 255, 0.6));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .title-group p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 4px;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8), 0 0 60px rgba(212, 255, 0, 0.08);
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .controls-panel {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(16px);
+    }
+    .card h3 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #d4ff00;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.5;
+    }
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: #d4ff00;
+      color: #070708;
+    }
+    .btn-primary:hover {
+      background: #e2ff40;
+      box-shadow: 0 0 25px rgba(212, 255, 0, 0.4);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title-group">
+        <h1>Kinetic Typography Motion Graphic</h1>
+        <p>// BUILT WITH REMOTION & REACT • 1920x1080 30FPS HIGH-DEFINITION</p>
+      </div>
+      <div class="badge">
+        <span class="badge-dot"></span>
+        RENDER COMPLETE • 380 FRAMES
+      </div>
+    </header>
+
+    <div class="video-wrapper">
+      <video src="out/video.mp4" controls autoplay loop playsinline></video>
+    </div>
+
+    <div class="btn-row">
+      <a href="out/video.mp4" download="Kinetic_Typography_Motion_Graphic.mp4" class="btn btn-primary">
+        ↓ Download MP4 (5.9 MB)
+      </a>
+      <button onclick="document.querySelector('video').currentTime = 0; document.querySelector('video').play();" class="btn btn-secondary">
+        ↻ Replay Video
+      </button>
+    </div>
+
+    <div class="controls-panel">
+      <div class="card">
+        <h3>01 // Rhythmic Sequences</h3>
+        <p>5 choreographed scenes with frame-level spring physics (damping: 10–16, stiffness: 220–280) for punchy, tactile typography.</p>
+      </div>
+      <div class="card">
+        <h3>02 // Real-time HUD</h3>
+        <p>Live calculated timecodes, interactive REC indicator, continuous sound-frequency equalizer bars, and dynamic progress metrics.</p>
+      </div>
+      <div class="card">
+        <h3>03 // Editorial Typography</h3>
+        <p>Curated Syne, Plus Jakarta Sans, and JetBrains Mono fonts paired with bold strike-throughs and neon highlighter boxes.</p>
+      </div>
+      <div class="card">
+        <h3>04 // Remotion CLI Ready</h3>
+        <p>Edit props in React and re-render instantly with <code>npm run render</code> or open the live studio using <code>npm run dev</code>.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
